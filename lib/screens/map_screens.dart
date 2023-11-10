@@ -1,13 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:geolocator/geolocator.dart';
 
 const MAPBOX_ACCESS_TOKEN =
     'pk.eyJ1Ijoiem90bzE5OTgiLCJhIjoiY2xvb3RxeXFrMDM2bzJrbzdhMXk4bWE1NiJ9.HvveZUcjGyb9ZCBJDnCziw';
-final MY_POSITION = LatLng(-35.4159, -71.6363);
 
-class MapScreen extends StatelessWidget {
+class MapScreen extends StatefulWidget {
   const MapScreen({super.key});
+
+  @override
+  State<MapScreen> createState() => _MapScreenState();
+}
+
+class _MapScreenState extends State<MapScreen> {
+  LatLng? myPosition;
+
+  Future<Position> determinePosition() async {
+    LocationPermission permission;
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+        return Future.error('error');
+      }
+    }
+    return await Geolocator.getCurrentPosition();
+  }
+
+  void getCurrentLocation() async {
+    Position position = await determinePosition();
+    setState(() {
+      myPosition = LatLng(position.latitude, position.longitude);
+      print(myPosition);
+    });
+  }
+
+  @override
+  void initState() {
+    getCurrentLocation();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +50,11 @@ class MapScreen extends StatelessWidget {
           title: const Text('Mapa'),
           backgroundColor: Colors.blueAccent,
         ),
-        body: FlutterMap(
+        body:  myPosition == null
+          ? const CircularProgressIndicator()
+          :FlutterMap(
           options: MapOptions(
-              initialCenter: MY_POSITION,
+              initialCenter: myPosition!,
               minZoom: 5,
               maxZoom: 25,
               initialZoom: 10),
@@ -35,7 +70,7 @@ class MapScreen extends StatelessWidget {
             MarkerLayer(
               markers: [
                 Marker(
-                  point: MY_POSITION,
+                  point: myPosition!,
                   width: 40,
                   height: 40,
                   child: FlutterLogo(),
