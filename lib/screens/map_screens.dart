@@ -73,8 +73,14 @@ class _MapScreenState extends State<MapScreen> {
                   point: myPosition!,
                   width: 40,
                   height: 40,
-                  child: FlutterLogo(),
+                  child: Image.asset('lib/assets/sunny.png'),
                 ),
+                Marker(
+                  point: const LatLng(-35.428815, -71.659349),
+                  width: 40,
+                  height: 40,
+                  child: Image.asset('lib/assets/Donas.png'), 
+                )
               ],
             ),
           ],
