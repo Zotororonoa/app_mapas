@@ -1,16 +1,23 @@
-# app_mapas
+# Evaluación II: Implementación de una característica Flutter
 
-A new Flutter project.
+### Nombre del Proyecto:
 
-## Getting Started
+Implementación de mapa y muestras de ubicaciones.
 
-This project is a starting point for a Flutter application.
+### Equipo 9:
 
-A few resources to get you started if this is your first Flutter project:
+- Diego Bravo Soto (Desarrollador Principal)
+- Francisco González Vidal (Arquitecto de Software)
+- Matías Morales Vergara (Encargado de diseño)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Caso de uso:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Aplicación de mapa en donde se puedan buscar diferentes tipos de locales en su respectiva dirección.
+
+### Diseño:
+
+### Implementación:
+
+### Arquitectura:
+
+
