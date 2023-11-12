@@ -47,7 +47,7 @@ class _MapScreenState extends State<MapScreen> {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text('Mapa'),
+          title: const Text('Naka-map'),
           backgroundColor: Colors.blueAccent,
         ),
         body:  myPosition == null
@@ -71,16 +71,53 @@ class _MapScreenState extends State<MapScreen> {
               markers: [
                 Marker(
                   point: myPosition!,
-                  width: 40,
-                  height: 40,
-                  child: Image.asset('lib/assets/sunny.png'),
+                  width: 90,
+                  height: 90,
+                  child: Image.asset('lib/assets/goingmerry.png'),
                 ),
                 Marker(
-                  point: const LatLng(-35.428815, -71.659349),
-                  width: 40,
-                  height: 40,
-                  child: Image.asset('lib/assets/Donas.png'), 
-                )
+                  point: const LatLng(-35.432460926832505, -71.63051261296629),
+                  width: 90,
+                  height: 90,
+                  child: Image.asset('lib/assets/polloKFC.png'), 
+                ),
+                 Marker(
+                  point: const LatLng(-35.42620576785557, -71.65544307382392),
+                  width: 70,
+                  height: 70,
+                  child: Image.asset('lib/assets/DonasSIR.png'), 
+                ),
+                Marker(
+                  point: const LatLng(-35.428207782099655, -71.66229879996882),
+                  width: 70,
+                  height: 70,
+                  child: Image.asset('lib/assets/SakeMB.png'), 
+                ),
+                 Marker(
+                  point: const LatLng(-35.42330319594781, -71.66184818900518),
+                  width: 70,
+                  height: 70,
+                  child: Image.asset('lib/assets/SakeAGB.png'), 
+                ),
+                 Marker(
+                  point: const LatLng(-35.434504869577985, -71.61708282474858),
+                  width: 70,
+                  height: 70,
+                  child: Image.asset('lib/assets/SakeMPB.png'), 
+                ),
+                Marker(
+                  point: const LatLng(-35.43475236653571, -71.63060786343407),
+                  width: 70,
+                  height: 70,
+                  child: Image.asset('lib/assets/pizzaDP.png'), 
+                ),
+                Marker(
+                  point: const LatLng(-35.43491408600035, -71.62903877120327),
+                  width: 70,
+                  height: 70,
+                  child: Image.asset('lib/assets/pizzaMP.png'), 
+                ),
+        
               ],
             ),
           ],

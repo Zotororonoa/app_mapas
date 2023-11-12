@@ -63,10 +63,16 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - lib/assets/Donas.png
-    - lib/assets/goinmerry.png
+    - lib/assets/goingmerry.png
     - lib/assets/Burguer.png
     - lib/assets/sunny.png
+    - lib/assets/polloKFC.png
+    - lib/assets/DonasSIR.png
+    - lib/assets/SakeMB.png
+    - lib/assets/SakeAGB.png
+    - lib/assets/SakeMPB.png
+    - lib/assets/pizzaDP.png
+    - lib/assets/pizzaMP.png
   
 
   # An image asset can refer to one or more resolution-specific "variants", see
