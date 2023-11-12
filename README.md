@@ -6,9 +6,9 @@ Implementación de mapa y muestras de ubicaciones.
 
 ### Equipo 9:
 
--Diego Bravo Soto - Desarrollador Principal
--Francisco González Vidal - Arquitecto de Software
--Matías Morales Vergara - Encargado de diseño
+- Diego Bravo Soto (Desarrollador Principal)
+- Francisco González Vidal (Arquitecto de Software)
+- Matías Morales Vergara (Encargado de diseño)
 
 ### Caso de uso:
 
