@@ -197,4 +197,18 @@ MarkerLayer(
 
 ### Arquitectura:
 
+La estructura de archivos propuesta para el proyecto se alinea con la arquitectura de software Modelo-Vista-Vistamodelo (MVVM). Esta metodología organiza la lógica de la aplicación en tres capas distintas:
+
+- Modelo: Representa los datos de la aplicación
+- Vista: Representa la interfaz de usuario de la aplicación
+- Vistamodelo: Actúa como intermediario entre el modelo y la vista.
+
+Dentro de la estructura de carpetas de la aplicación, la carpeta "lib" contiene el código fuente de la aplicación. La subcarpeta "screens" alberga clases que representan las vistas de la aplicación, siendo "map_screens.dart" una de ellas.
+
+La clase "main.dart" funciona como el punto de entrada de la aplicación. Esta clase crea una instancia de "map_screens.dart" y la presenta en pantalla.
+
+La elección de la arquitectura MVVM para nuestra aplicación se justifica por su capacidad para estructuras el código de manera ordenada, mejorando la legilibildad y la mantenibilidad.
+
+![Arquitectura](https://cdn.discordapp.com/attachments/597145376671268874/1173793893024796692/image.png?ex=65653fc0&is=6552cac0&hm=30902e21d4cf5427384ad1a436e06592c205aacd91cd9967c86898022ef4aa26&)
+
 
