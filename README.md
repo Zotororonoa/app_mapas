@@ -31,11 +31,11 @@ Y tambien se le agrego un modo oscuro, para la mejorar experiencia del usuario.
 Para comenzar se utilizan las se utilizan las siguientes librerias, para las funciones de mapa, el trabajo con tatitudes y longitudes
 y para el uso de GPS.
 
-'''
+```
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:geolocator/geolocator.dart';
-'''
+```
 
 ### Arquitectura:
 
