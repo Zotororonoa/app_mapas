@@ -16,8 +16,7 @@ Aplicación de mapa en donde se puedan buscar diferentes tipos de locales en su 
 
 ### Diseño:
 
-![Hola](https://static.wikia.nocookie.net/onepiece/images/a/af/Monkey_D._Luffy_Anime_Dos_Años_Después_Infobox.png/revision/latest?cb=20200616015904&path-prefix=es)
-
+![Maqueta](https://cdn.discordapp.com/attachments/597145376671268874/1173776724375392307/image.png?ex=65652fc2&is=6552bac2&hm=bcb7a384d5e9a0863fc28dd2921cf20da28108451822c516371a6cd1845f372b&)
 
 ### Implementación:
 
