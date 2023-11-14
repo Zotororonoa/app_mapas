@@ -36,6 +36,19 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:geolocator/geolocator.dart';
 ```
+Se define un token que es necesario para la utilización de la API de MAPBOX y luego se define la clase MapScreen y un estado.
+
+```
+const MAPBOX_ACCESS_TOKEN =
+    'pk.eyJ1Ijoiem90bzE5OTgiLCJhIjoiY2xvb3RxeXFrMDM2bzJrbzdhMXk4bWE1NiJ9.HvveZUcjGyb9ZCBJDnCziw';
+
+class MapScreen extends StatefulWidget {
+  const MapScreen({super.key});
+
+  @override
+  State<MapScreen> createState() => _MapScreenState();
+}
+```
 
 ### Arquitectura:
 
