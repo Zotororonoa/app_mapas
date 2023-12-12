@@ -59,6 +59,11 @@ class _MapScreenState extends State<MapScreen> {
                     children: [
                       Text('$markerName'),
                       const SizedBox(height: 16),
+                      
+                      Text(markerDescriptions[markerName] ?? ''),
+
+                      const SizedBox(height: 16),
+
                       CarouselSlider(
                         options: CarouselOptions(
                           height: 200,
@@ -68,8 +73,7 @@ class _MapScreenState extends State<MapScreen> {
                           return Image.asset(imagePath);
                         }).toList(),
                       ),
-                      const SizedBox(height: 16),
-                      Text(markerDescriptions[markerName] ?? ''),
+                      
                     ],
                   ),
                 ),
@@ -94,7 +98,7 @@ class _MapScreenState extends State<MapScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Naka-map'),
+        title: const Text('Busca Tienda'),
         backgroundColor: Colors.blueAccent,
         actions: [
           GestureDetector(
