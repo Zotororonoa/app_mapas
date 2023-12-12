@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 const MAPBOX_ACCESS_TOKEN =
     'pk.eyJ1Ijoiem90bzE5OTgiLCJhIjoiY2xvb3RxeXFrMDM2bzJrbzdhMXk4bWE1NiJ9.HvveZUcjGyb9ZCBJDnCziw';
@@ -40,34 +41,45 @@ class _MapScreenState extends State<MapScreen> {
     });
   }
 
-//Este es el Widget, por lo que entendi adentro debe llevar 
-//cualquier cosa que se pueda scrollear (DraggableScrollableSheet)
-
-//El resto ocurre en los marcadores abajito 
-
-void _showBottomSheet(BuildContext context, String markerName) {
-  showModalBottomSheet(
-    context: context,
-    isScrollControlled: true, // Esto permite que el BottomSheet se mueva pa arriba
-    builder: (BuildContext context) {
-      return DraggableScrollableSheet(
-        expand: false,
-        builder: (BuildContext context, ScrollController scrollController) {
-          return Container(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: SingleChildScrollView(
-                controller: scrollController,
-                child: Text('Bottom Sheet Content for $markerName'),
+  void _showBottomSheet(BuildContext context, String markerName) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      builder: (BuildContext context) {
+        return DraggableScrollableSheet(
+          expand: false, // Permitir que el BottomSheet se desplace más arriba en la pantalla
+          builder: (BuildContext context, ScrollController scrollController) {
+            return Container(
+              width: MediaQuery.of(context).size.width, // Establecer el ancho de pantalla disponible
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: SingleChildScrollView(
+                  controller: scrollController,
+                  child: Column(
+                    children: [
+                      Text('$markerName'),
+                      const SizedBox(height: 16),
+                      CarouselSlider(
+                        options: CarouselOptions(
+                          height: 200,
+                          enableInfiniteScroll: false,
+                        ),
+                        items: markerImages[markerName]!.map((imagePath) {
+                          return Image.asset(imagePath);
+                        }).toList(),
+                      ),
+                      const SizedBox(height: 16),
+                      Text(markerDescriptions[markerName] ?? ''),
+                    ],
+                  ),
+                ),
               ),
-            ),
-          );
-        },
-      );
-    },
-  );
-}
-
+            );
+          },
+        );
+      },
+    );
+  }
 
 
 
@@ -122,27 +134,26 @@ void _showBottomSheet(BuildContext context, String markerName) {
                   markers: [
                     Marker(
                       point: myPosition!,
-                      width: 90,
-                      height: 90,
+                      width: 30,
+                      height: 30,
                       child: GestureDetector(
                         onTap: () {
                           _showBottomSheet(context, 'My Position');
                         },
-                        child: Image.asset('lib/assets/goingmerry.png'),
+                        child: Image.asset('lib/assets/green.png'),
                       ),
                     ),
                     Marker(
-                      point: const LatLng(-35.432460926832505, -71.63051261296629),
-                      width: 90,
-                      height: 90,
+                      point: const LatLng(-35.42538619431709, -71.65655862634684),
+                      width: 30,
+                      height: 30,
                       child: GestureDetector(
                         onTap: () {
-                          _showBottomSheet(context, 'Marker 2');
+                          _showBottomSheet(context, 'Falabella');
                         },
-                        child: Image.asset('lib/assets/polloKFC.png'),
+                        child: Image.asset('lib/assets/red.png'),
                       ),
                     ),
-                    
                   ],
                 ),
               ],
@@ -151,3 +162,24 @@ void _showBottomSheet(BuildContext context, String markerName) {
   }
 }
 
+
+
+  Map<String, List<String>> markerImages = {
+    'My Position': [
+      'lib/assets/photo1.jpg',
+      'lib/assets/photo2.jpg',
+      'lib/assets/photo3.jpg',
+    ],
+    'Falabella': [
+      'lib/assets/lugares/falabella1.jfif',
+      'lib/assets/lugares/falabella2.jpg',
+      'lib/assets/lugares/falabella3.jpg',
+    ],
+  };
+
+
+  final Map<String, String> markerDescriptions = {
+  'My Position': 'Esta es la descripción para el Marcador 1',
+  'Falabella': 'Esta es la descripción para el Marcador 2',
+  // Agrega más descripciones aquí
+};
