@@ -3,9 +3,9 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-
-const MAPBOX_ACCESS_TOKEN =
-    'pk.eyJ1Ijoiem90bzE5OTgiLCJhIjoiY2xvb3RxeXFrMDM2bzJrbzdhMXk4bWE1NiJ9.HvveZUcjGyb9ZCBJDnCziw';
+import 'package:app_mapas/screens/token.dart';
+import 'package:app_mapas/screens/images.dart';
+import 'package:app_mapas/screens/descripciones.dart';
 
 class MapScreen extends StatefulWidget {
   const MapScreen({Key? key}) : super(key: key);
@@ -47,10 +47,13 @@ class _MapScreenState extends State<MapScreen> {
       isScrollControlled: true,
       builder: (BuildContext context) {
         return DraggableScrollableSheet(
-          expand: false, // Permitir que el BottomSheet se desplace más arriba en la pantalla
+          expand:
+              false, // Permitir que el BottomSheet se desplace más arriba en la pantalla
           builder: (BuildContext context, ScrollController scrollController) {
             return Container(
-              width: MediaQuery.of(context).size.width, // Establecer el ancho de pantalla disponible
+              width: MediaQuery.of(context)
+                  .size
+                  .width, // Establecer el ancho de pantalla disponible
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: SingleChildScrollView(
@@ -59,11 +62,8 @@ class _MapScreenState extends State<MapScreen> {
                     children: [
                       Text('$markerName'),
                       const SizedBox(height: 16),
-                      
                       Text(markerDescriptions[markerName] ?? ''),
-
                       const SizedBox(height: 16),
-
                       CarouselSlider(
                         options: CarouselOptions(
                           height: 200,
@@ -73,7 +73,6 @@ class _MapScreenState extends State<MapScreen> {
                           return Image.asset(imagePath);
                         }).toList(),
                       ),
-                      
                     ],
                   ),
                 ),
@@ -84,8 +83,6 @@ class _MapScreenState extends State<MapScreen> {
       },
     );
   }
-
-
 
   @override
   void initState() {
@@ -104,12 +101,14 @@ class _MapScreenState extends State<MapScreen> {
           GestureDetector(
             child: Icon(estado),
             onTap: () {
-              setState(() => id = 'mapbox/navigation-night-v1');
-              setState(() => estado = Icons.sunny);
-            },
-            onDoubleTap: () {
-              setState(() => id = 'mapbox/streets-v12');
-              setState(() => estado = Icons.nightlight);
+              setState(() {
+                id = (id == 'mapbox/streets-v12')
+                    ? 'mapbox/navigation-night-v1'
+                    : 'mapbox/streets-v12';
+                estado = (id == 'mapbox/streets-v12')
+                    ? Icons.nightlight
+                    : Icons.sunny;
+              });
             },
           ),
           const SizedBox(
@@ -148,12 +147,172 @@ class _MapScreenState extends State<MapScreen> {
                       ),
                     ),
                     Marker(
-                      point: const LatLng(-35.42538619431709, -71.65655862634684),
+                      point:
+                          const LatLng(-35.42538619431709, -71.65655862634684),
                       width: 30,
                       height: 30,
                       child: GestureDetector(
                         onTap: () {
                           _showBottomSheet(context, 'Falabella');
+                        },
+                        child: Image.asset('lib/assets/red.png'),
+                      ),
+                    ),
+                    Marker(
+                      point:
+                          const LatLng(-35.427400072669165, -71.64634110877468),
+                      width: 30,
+                      height: 30,
+                      child: GestureDetector(
+                        onTap: () {
+                          _showBottomSheet(
+                              context, 'Hospital Regional de Talca');
+                        },
+                        child: Image.asset('lib/assets/red.png'),
+                      ),
+                    ),
+                    Marker(
+                      point:
+                          const LatLng(-35.42332995721795, -71.65941854905245),
+                      width: 30,
+                      height: 30,
+                      child: GestureDetector(
+                        onTap: () {
+                          _showBottomSheet(context, 'RocaDragon');
+                        },
+                        child: Image.asset('lib/assets/red.png'),
+                      ),
+                    ),
+                    Marker(
+                      point:
+                          const LatLng(-35.425405777961885, -71.65977317671307),
+                      width: 30,
+                      height: 30,
+                      child: GestureDetector(
+                        onTap: () {
+                          _showBottomSheet(context, 'Plus Ultra');
+                        },
+                        child: Image.asset('lib/assets/red.png'),
+                      ),
+                    ),
+                    Marker(
+                      point:
+                          const LatLng(-35.427445970248115, -71.65438237147075),
+                      width: 30,
+                      height: 30,
+                      child: GestureDetector(
+                        onTap: () {
+                          _showBottomSheet(context, 'Mall Portal Centro');
+                        },
+                        child: Image.asset('lib/assets/red.png'),
+                      ),
+                    ),
+                    Marker(
+                      point:
+                          const LatLng(-35.4266023247774, -71.65853979539249),
+                      width: 30,
+                      height: 30,
+                      child: GestureDetector(
+                        onTap: () {
+                          _showBottomSheet(context, 'McDonald´s');
+                        },
+                        child: Image.asset('lib/assets/red.png'),
+                      ),
+                    ),
+                    Marker(
+                      point:
+                          const LatLng(-35.430169291605296, -71.64755321063052),
+                      width: 30,
+                      height: 30,
+                      child: GestureDetector(
+                        onTap: () {
+                          _showBottomSheet(
+                              context, 'Terminal de buses de Talca');
+                        },
+                        child: Image.asset('lib/assets/red.png'),
+                      ),
+                    ),
+                    Marker(
+                      point:
+                          const LatLng(-35.43302572167493, -71.63098520551083),
+                      width: 30,
+                      height: 30,
+                      child: GestureDetector(
+                        onTap: () {
+                          _showBottomSheet(
+                              context, 'Plaza Maule Shopping Center');
+                        },
+                        child: Image.asset('lib/assets/red.png'),
+                      ),
+                    ),
+                    Marker(
+                      point:
+                          const LatLng(-35.43078625204517, -71.62997254106317),
+                      width: 30,
+                      height: 30,
+                      child: GestureDetector(
+                        onTap: () {
+                          _showBottomSheet(context, 'Paris Talca');
+                        },
+                        child: Image.asset('lib/assets/red.png'),
+                      ),
+                    ),
+                    Marker(
+                      point:
+                          const LatLng(-35.42049339263229, -71.64917594708807),
+                      width: 30,
+                      height: 30,
+                      child: GestureDetector(
+                        onTap: () {
+                          _showBottomSheet(context, 'Nutre Y Entrena');
+                        },
+                        child: Image.asset('lib/assets/red.png'),
+                      ),
+                    ),
+                    Marker(
+                      point:
+                          const LatLng(-35.42711168452206, -71.65226585192406),
+                      width: 30,
+                      height: 30,
+                      child: GestureDetector(
+                        onTap: () {
+                          _showBottomSheet(context, 'Oxford Talca');
+                        },
+                        child: Image.asset('lib/assets/red.png'),
+                      ),
+                    ),
+                    Marker(
+                      point:
+                          const LatLng(-35.42328523950442, -71.66505583452582),
+                      width: 30,
+                      height: 30,
+                      child: GestureDetector(
+                        onTap: () {
+                          _showBottomSheet(context, 'Monky Coffee');
+                        },
+                        child: Image.asset('lib/assets/red.png'),
+                      ),
+                    ),
+                    Marker(
+                      point:
+                          const LatLng(-35.42860071437428, -71.65248163901525),
+                      width: 30,
+                      height: 30,
+                      child: GestureDetector(
+                        onTap: () {
+                          _showBottomSheet(context, 'Chile Baterias Talca 2');
+                        },
+                        child: Image.asset('lib/assets/red.png'),
+                      ),
+                    ),
+                    Marker(
+                      point:
+                          const LatLng(-35.426480686250194, -71.6498477097226),
+                      width: 30,
+                      height: 30,
+                      child: GestureDetector(
+                        onTap: () {
+                          _showBottomSheet(context, 'Telesonido');
                         },
                         child: Image.asset('lib/assets/red.png'),
                       ),
@@ -165,25 +324,3 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 }
-
-
-
-  Map<String, List<String>> markerImages = {
-    'My Position': [
-      'lib/assets/photo1.jpg',
-      'lib/assets/photo2.jpg',
-      'lib/assets/photo3.jpg',
-    ],
-    'Falabella': [
-      'lib/assets/lugares/falabella1.jfif',
-      'lib/assets/lugares/falabella2.jpg',
-      'lib/assets/lugares/falabella3.jpg',
-    ],
-  };
-
-
-  final Map<String, String> markerDescriptions = {
-  'My Position': 'Esta es la descripción para el Marcador 1',
-  'Falabella': 'Esta es la descripción para el Marcador 2',
-  // Agrega más descripciones aquí
-};
