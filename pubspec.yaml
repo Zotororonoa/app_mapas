@@ -69,6 +69,43 @@ flutter:
     - lib/assets/lugares/falabella1.jfif
     - lib/assets/lugares/falabella2.jpg
     - lib/assets/lugares/falabella3.jpg
+    - lib/assets/lugares/hospitaltalca1.jpg
+    - lib/assets/lugares/hospitaltalca2.jpg
+    - lib/assets/lugares/hospitaltalca3.jpg
+    - lib/assets/lugares/mcdonalds 1.jpeg
+    - lib/assets/lugares/mcdonalds 2.jpeg
+    - lib/assets/lugares/mcdonalds3.jpg
+    - lib/assets/lugares/oxford1.jpg
+    - lib/assets/lugares/oxford2.jpg
+    - lib/assets/lugares/oxford3.jpg
+    - lib/assets/lugares/plazamaule1.jpg
+    - lib/assets/lugares/plazamaule2.jpg
+    - lib/assets/lugares/plazamaule3.jpg
+    - lib/assets/lugares/hospitaltalca1.jpg
+    - lib/assets/lugares/hospitaltalca2.jpg
+    - lib/assets/lugares/hospitaltalca3.jpg
+    - lib/assets/lugares/monkey1.jpeg
+    - lib/assets/lugares/monkey2.jpeg
+    - lib/assets/lugares/monkey3.jpeg
+    - lib/assets/lugares/nutreentrena1.jpg
+    - lib/assets/lugares/nutreentrena2.jpg
+    - lib/assets/lugares/nutreentrena3.jpg
+    - lib/assets/lugares/plusultra1.jpeg
+    - lib\assets/lugares/plusultra2.JPG
+    - lib/assets/lugares/plusultra3.jpeg
+    - lib/assets/lugares/portalcentro1.jpg
+    - lib/assets/lugares/portalcentro2.jpg
+    - lib\assets/lugares/portalcentro3.png
+    - lib/assets/lugares/rocadragon1.jpg
+    - lib/assets/lugares/Rocadragon2.PNG
+    - lib/assets/lugares/rocadragon3.jpg
+    - lib/assets/lugares/telesonido1.jpeg
+    - lib/assets/lugares/telesonido2.jpeg
+    - lib/assets/lugares/telesonido3.jpeg
+    - lib/assets/lugares/terminaltalca1.jpg
+    - lib/assets/lugares/terminaltalca2.jpg
+    - lib/assets/lugares/terminaltalca3.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
