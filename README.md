@@ -2,13 +2,15 @@
 
 ### Nombre del Proyecto:
 
-Implementación de mapa y muestras de ubicaciones.
+Shop Finder
 
 ### Equipo 9:
 
-- Diego Bravo Soto (Desarrollador Principal)
-- Francisco González Vidal (Arquitecto de Software)
-- Matías Morales Vergara (Encargado de diseño)
+- Diego Bravo Soto 
+- Robinson Donoso Zacconi
+- Francisco González Vidal 
+- Manuel Montecinos Sias
+- Carolina Robles Fuentes
 
 ### Caso de uso:
 
