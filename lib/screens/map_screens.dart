@@ -3,9 +3,9 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:app_mapas/screens/token.dart';
-import 'package:app_mapas/screens/images.dart';
-import 'package:app_mapas/screens/descripciones.dart';
+import 'package:shop_finder/back/token.txt';
+import 'package:shop_finder/back/images.dart';
+import 'package:shop_finder/back/descripciones.dart';
 
 class MapScreen extends StatefulWidget {
   const MapScreen({Key? key}) : super(key: key);
@@ -95,7 +95,7 @@ class _MapScreenState extends State<MapScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Busca Tienda'),
+        title: const Text('Shop Finder'),
         backgroundColor: Colors.blueAccent,
         actions: [
           GestureDetector(
@@ -143,7 +143,7 @@ class _MapScreenState extends State<MapScreen> {
                         onTap: () {
                           _showBottomSheet(context, 'My Position');
                         },
-                        child: Image.asset('lib/assets/green.png'),
+                        child: Image.asset('assets/green.png'),
                       ),
                     ),
                     Marker(
@@ -155,7 +155,7 @@ class _MapScreenState extends State<MapScreen> {
                         onTap: () {
                           _showBottomSheet(context, 'Falabella');
                         },
-                        child: Image.asset('lib/assets/red.png'),
+                        child: Image.asset('assets/red.png'),
                       ),
                     ),
                     Marker(
@@ -168,7 +168,7 @@ class _MapScreenState extends State<MapScreen> {
                           _showBottomSheet(
                               context, 'Hospital Regional de Talca');
                         },
-                        child: Image.asset('lib/assets/red.png'),
+                        child: Image.asset('assets/red.png'),
                       ),
                     ),
                     Marker(
@@ -180,7 +180,7 @@ class _MapScreenState extends State<MapScreen> {
                         onTap: () {
                           _showBottomSheet(context, 'RocaDragon');
                         },
-                        child: Image.asset('lib/assets/red.png'),
+                        child: Image.asset('assets/red.png'),
                       ),
                     ),
                     Marker(
@@ -192,7 +192,7 @@ class _MapScreenState extends State<MapScreen> {
                         onTap: () {
                           _showBottomSheet(context, 'Plus Ultra');
                         },
-                        child: Image.asset('lib/assets/red.png'),
+                        child: Image.asset('assets/red.png'),
                       ),
                     ),
                     Marker(
@@ -204,7 +204,7 @@ class _MapScreenState extends State<MapScreen> {
                         onTap: () {
                           _showBottomSheet(context, 'Mall Portal Centro');
                         },
-                        child: Image.asset('lib/assets/red.png'),
+                        child: Image.asset('assets/red.png'),
                       ),
                     ),
                     Marker(
@@ -216,7 +216,7 @@ class _MapScreenState extends State<MapScreen> {
                         onTap: () {
                           _showBottomSheet(context, 'McDonald´s');
                         },
-                        child: Image.asset('lib/assets/red.png'),
+                        child: Image.asset('assets/red.png'),
                       ),
                     ),
                     Marker(
@@ -229,7 +229,7 @@ class _MapScreenState extends State<MapScreen> {
                           _showBottomSheet(
                               context, 'Terminal de buses de Talca');
                         },
-                        child: Image.asset('lib/assets/red.png'),
+                        child: Image.asset('assets/red.png'),
                       ),
                     ),
                     Marker(
@@ -242,7 +242,7 @@ class _MapScreenState extends State<MapScreen> {
                           _showBottomSheet(
                               context, 'Plaza Maule Shopping Center');
                         },
-                        child: Image.asset('lib/assets/red.png'),
+                        child: Image.asset('assets/red.png'),
                       ),
                     ),
                     Marker(
@@ -254,7 +254,7 @@ class _MapScreenState extends State<MapScreen> {
                         onTap: () {
                           _showBottomSheet(context, 'Paris Talca');
                         },
-                        child: Image.asset('lib/assets/red.png'),
+                        child: Image.asset('assets/red.png'),
                       ),
                     ),
                     Marker(
@@ -266,7 +266,7 @@ class _MapScreenState extends State<MapScreen> {
                         onTap: () {
                           _showBottomSheet(context, 'Nutre Y Entrena');
                         },
-                        child: Image.asset('lib/assets/red.png'),
+                        child: Image.asset('assets/red.png'),
                       ),
                     ),
                     Marker(
@@ -278,7 +278,7 @@ class _MapScreenState extends State<MapScreen> {
                         onTap: () {
                           _showBottomSheet(context, 'Oxford Talca');
                         },
-                        child: Image.asset('lib/assets/red.png'),
+                        child: Image.asset('assets/red.png'),
                       ),
                     ),
                     Marker(
@@ -290,7 +290,7 @@ class _MapScreenState extends State<MapScreen> {
                         onTap: () {
                           _showBottomSheet(context, 'Monky Coffee');
                         },
-                        child: Image.asset('lib/assets/red.png'),
+                        child: Image.asset('assets/red.png'),
                       ),
                     ),
                     Marker(
@@ -302,7 +302,7 @@ class _MapScreenState extends State<MapScreen> {
                         onTap: () {
                           _showBottomSheet(context, 'Chile Baterias Talca 2');
                         },
-                        child: Image.asset('lib/assets/red.png'),
+                        child: Image.asset('assets/red.png'),
                       ),
                     ),
                     Marker(
@@ -314,7 +314,7 @@ class _MapScreenState extends State<MapScreen> {
                         onTap: () {
                           _showBottomSheet(context, 'Telesonido');
                         },
-                        child: Image.asset('lib/assets/red.png'),
+                        child: Image.asset('assets/red.png'),
                       ),
                     ),
                   ],
